@@ -1,21 +1,26 @@
-<div class="tdl-cards-container" *ngIf="allTaskEntries.length > 0">
-  <mat-card class="tdl-card" *ngFor="let entries of allTaskEntries; let index = index">
-    <mat-card-header>
-      <mat-card-title>{{ entries.title }}</mat-card-title>
-      <mat-card-subtitle>{{ entries.address }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <ul>
-        <li *ngFor="let task of entries.tasks; let taskIndex = index">
-          <div class="task-checkbox-container">
-            <span [ngClass]="{'completed-task': task.isChecked, 'active-task': !task.isChecked}">
-              {{ task.taskName }}
-            </span>
-            <mat-checkbox class="task-checkbox" [checked]='task.isChecked'
-              (change)="onCheckboxClicked(task, index)"></mat-checkbox>
-          </div>
-        </li>
-      </ul>
-    </mat-card-content>
-  </mat-card>
+<div class="tdl-cards-container">
+  <div class="no-entries-found" *ngIf="allTaskEntries.length === undefined">
+    You don't have any agenda today!
+  </div>
+  <div *ngIf="allTaskEntries.length > 0">
+    <mat-card class="tdl-card" *ngFor="let entries of allTaskEntries; let index = index">
+      <mat-card-header>
+        <mat-card-title>{{ entries.title }}</mat-card-title>
+        <mat-card-subtitle>{{ entries.address }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <ul>
+          <li *ngFor="let task of entries.tasks; let taskIndex = index">
+            <div class="task-checkbox-container">
+              <span [ngClass]="{'completed-task': task.isChecked, 'active-task': !task.isChecked}">
+                {{ task.taskName }}
+              </span>
+              <mat-checkbox class="task-checkbox" [checked]='task.isChecked'
+                (change)="onCheckboxClicked(task, index)"></mat-checkbox>
+            </div>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
