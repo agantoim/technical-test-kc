@@ -1,0 +1,35 @@
+.tdl-form-container {
+  .tdl-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .tdl-action-button {
+      button {
+        padding: unset;
+        min-width: 50px;
+      }
+    }
+  }
+
+  .tdl-form-container {
+    .tdl-field-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .task-grouping-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+
+    .tdl-form-button {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}

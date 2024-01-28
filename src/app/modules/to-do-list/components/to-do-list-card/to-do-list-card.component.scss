@@ -1,0 +1,20 @@
+.tdl-cards-container {
+  margin-top: 20px;
+  .tdl-card {
+    margin-top: 20px;
+
+    .task-checkbox-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
+
+.active-task {
+  text-decoration: none;
+}
