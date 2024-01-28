@@ -5,6 +5,11 @@
     justify-content: space-between;
     align-items: center;
 
+    .tdl-title {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
     .tdl-action-button {
       button {
         padding: unset;
